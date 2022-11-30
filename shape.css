@@ -4,6 +4,16 @@
 	padding: 0px;
 }
 
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+  }
+
+
 body {
 	background-color: #FDCA40;
 	position: center;
@@ -15,16 +25,140 @@ body {
 	position: relative;
 }
 
-nav {
+header {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: #F79824;
+	padding: 10px 10%;
+	background-color: #24252a;
+  }
+  
+ 
+  .logo {
+	height: 0%;
+	width: 30px;
+	
+	cursor: pointer;
 }
+
+.logo img {
+	width: 150%;
+	height: 200%;
+	object-fit: contain;
+	transform: all;
+	position:relative;
+	
+}
+  
+  .nav__links a,.cta,.overlay__content a {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	color: #edf0f1;
+	text-decoration: none;
+  }
+  
+  .nav__links {
+	list-style: none;
+	display: flex;
+  }
+  
+  .nav__links li {
+	padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+	transition: color 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+	color: #0088a9;
+  }
+  
+  .cta {
+	padding: 9px 25px;
+	background-color: rgba(0, 136, 169, 1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: background-color 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+	background-color: rgba(0, 136, 169, 0.8);
+  }
+  
+  /* Mobile Nav */
+  	
+  .menu {
+	display: none;
+  }
+  
+  .overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	background-color: #24252a;
+	overflow-x: hidden;
+	transition: width 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+	width: 100%;
+  }
+  
+  .overlay__content {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .overlay a {
+	padding: 15px;
+	font-size: 36px;
+	display: block;
+	transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+	color: #0088a9;
+  }
+  .overlay .close {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+	color: #edf0f1;
+  }
+  
+  @media screen and (max-height: 450px) {
+	.overlay a {
+	  font-size: 20px;
+	}
+	.overlay .close {
+	  font-size: 40px;
+	  top: 15px;
+	  right: 35px;
+	}
+  }
+  
+  @media only screen and (max-width: 800px) {
+	.nav__links,
+	.cta {
+	  display: none;
+	}
+	.menu {
+	  display: initial;
+	}
+  }
+  
+
+
 
 .menu {
 	list-style: repeating-radial-gradient();
@@ -74,7 +208,7 @@ nav {
 	left: 50%;
 	right: 50%;
 	transform: translate(-50%, -50%);
-	margin-top: -200px;
+	margin-top: -20px;
 	margin-bottom: 8px;
 
 }
@@ -83,11 +217,13 @@ nav {
 	position: center;
 	display: flex;
 	
+	
 }
 
 .content p {
 	position: center;
 	color: grey;
+
 
 }
 
@@ -99,14 +235,18 @@ nav {
 	transform: translate(-50%, -50%);
 	width: 50%;
 	margin-top: 90px;
+	
+	
+	
+
 
 }
 
 .text h1 {
 	font-size: 3.5em;
-	color:red;
 	margin: 0px 0px 10px 0px;
 	line-height: 60px;
+
 }
 
 .text p {
@@ -123,26 +263,12 @@ nav {
 	color: red;
 	background-color: #33A1FD;
 	border-radius: 20px;
-	box-shadow: 5px 10px 30px rgba(24, 139, 119, 0.2);
+	box-shadow: 5px 10px 30px rgba(24, 139, 119, 0.7);
 	
 }
 
 .resume-btn:hover {
 	background-color: #d7fdec;
-	zoom: 120%;
+	zoom: 105%;
 }
 
-.logo {
-	height: 10%;
-	width: 100px;
-	height: 100px;
-}
-
-.logo img {
-	width: 150%;
-	height: 200%;
-	object-fit: contain;
-	transform: all;
-	position:relative;
-	
-}
