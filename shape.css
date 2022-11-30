@@ -260,7 +260,6 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: red;
 	background-color: #33A1FD;
 	border-radius: 20px;
 	box-shadow: 5px 10px 30px rgba(24, 139, 119, 0.7);
