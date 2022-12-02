@@ -15,7 +15,7 @@
 
 
 body {
-	background-color: #FDCA40;
+	background-color:#f4ff9a;
 	position: center;
 }
 
@@ -29,24 +29,22 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 10%;
+	padding: 30px 10%;
 	background-color: #24252a;
   }
   
  
   .logo {
-	height: 0%;
-	width: 30px;
-	
+
 	cursor: pointer;
 }
 
 .logo img {
-	width: 150%;
-	height: 200%;
+	width: 20%;
+	height: 30%;
+	
 	object-fit: contain;
-	transform: all;
-	position:relative;
+	position:static;
 	
 }
   
@@ -88,7 +86,7 @@ header {
   }
   
   /* Mobile Nav */
-  	
+
   .menu {
 	display: none;
   }
@@ -124,8 +122,7 @@ header {
 	transition: color 0.3s ease 0s;
   }
   
-  .overlay a:hover,
-  .overlay a:focus {
+  .overlay a:hover,.overlay a:focus {
 	color: #0088a9;
   }
   .overlay .close {
@@ -157,66 +154,43 @@ header {
 	}
   }
   
-
-
-
-.menu {
-	list-style: repeating-radial-gradient();
+.page-main {
 	display: flex;
-	font-weight: 500;
-	font-size: 1em;
 }
-
-.menu li a {
-	height: 40px;
-	line-height: 43px;
-	margin: 3px;
-	padding: 0px 22px;
-	display: flex;
-	font-size: 1em;
-	text-transform: 1px;
-}
-
-.hey {
-	color: purple;
-	font-weight: 500;
-	font-size: 1em;
-	border-bottom: 2px solid #39bfbd;
-}
-
 .image {
 	width: 500px;
 	height: 500px;
 }
 
 .image img {
-	width: 100%;
-	height: 100%;
+	width: 50%;
+	height: 50%;
 	object-fit: contain;
 	transform: all;
 	position: relative;
-	margin-top: 200px;
+	margin-top: 150px;
+	margin-left: 80px;
+	flex-wrap:nowrap;
+	
+
 	
 }
 
 .content {
-	display: list-item;
-	width: 50%;
-	justify-content: space-around;
-	align-items: center;
 	position: relative;
-	left: 50%;
-	right: 50%;
-	transform: translate(-50%, -50%);
-	margin-top: -20px;
-	margin-bottom: 8px;
-
+	margin-left: 10%;
+	margin-top: 10%;
+	animation-name: blinking;
+    animation-duration: 4s;
 }
-
+@keyframes blinking {
+	from {left:-200px; top:0px;}
+	to {left:0PX; top:0px;}
+  }
 .content h1 {
-	position: center;
-	display: flex;
-	
+font-size: 80px;
+display: inline;
+
 	
 }
 
@@ -228,25 +202,10 @@ header {
 }
 
 .text {
-	width: 00px;
-	position: relative;
-	left: 50%;
-	right: 50%;
-	transform: translate(-50%, -50%);
-	width: 50%;
-	margin-top: 90px;
-	
-	
-	
-
-
+	margin-left: 50%;
 }
 
 .text h1 {
-	font-size: 3.5em;
-	margin: 0px 0px 10px 0px;
-	line-height: 60px;
-
 }
 
 .text p {
@@ -260,14 +219,45 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #33A1FD;
+	-webkit-text-fill-color: white;
+	background-color: #0ab2db;
 	border-radius: 20px;
-	box-shadow: 5px 10px 30px rgba(24, 139, 119, 0.7);
-	
+	box-shadow: 5px 10px 30px #ab2db;
 }
 
 .resume-btn:hover {
-	background-color: #d7fdec;
+	background-color: #044a5c;
 	zoom: 105%;
 }
 
+/*this is for skills page*/
+.contentofskills{
+	font-size: medium;
+	font-style: normal;
+	font: caption-bold;
+	padding-left: 300px;
+	margin-top: 100px;
+	display:flexbox;	
+
+
+}
+.skilllist{
+	flex: 50%;
+	padding: 5px;
+
+}
+.laptop-photo{
+	width: 300px;
+	height: 200px;
+
+}
+
+.chart{
+	padding: 0px;
+	zoom: 150%;
+	margin-top: 0px;
+
+}
+
+
+  
